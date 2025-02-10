@@ -1,5 +1,4 @@
 import React from "react";
-import WaveText from "./WaveText";
 
 import MyCarousel from "./Carousel";
 import { arrayElements } from "../helpers/arrayCarousel.js";

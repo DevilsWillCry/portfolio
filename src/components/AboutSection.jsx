@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactTyped, Typed } from "react-typed";
 import imageAbout from "../assets/about-image.jpg";
 import WaveText from "./WaveText";
 

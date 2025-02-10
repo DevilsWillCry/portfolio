@@ -12,28 +12,28 @@ import {
 
 const navigation = [
   {
-    name: "Home",
+    name: "Inicio",
     href: "#home",
     current: true,
     image: <HomeIcon className="text-myColor size-5" />,
   },
   {
-    name: "About Me",
+    name: "Sobre mí",
     href: "#about",
     image: <UserCircleIcon className="text-myColor size-5" />,
   },
   {
-    name: "Technologies",
+    name: "Tecnologías",
     href: "#technologies",
     image: <CommandLineIcon className="text-myColor size-5" />,
   },
   {
-    name: "Projects",
+    name: "Proyectos",
     href: "#projects",
     image: <TrophyIcon className="text-myColor size-5" />,
   },
   {
-    name: "Contact",
+    name: "Contacto",
     href: "#contact",
     image: <PhoneIcon className="text-myColor size-5" />,
   },
@@ -68,16 +68,16 @@ function NavBar() {
   };
 
   return (
-    <div className="flex flex-row  fixed top-0 left-0 w-screen h-auto bg-black max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between z-50">
+    <div className="flex flex-row  sticky top-8 left-[50%]  w-full h-auto max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between bg-white contrast-100">
       {/* Text NavBar in PC resolution*/}
-      <div className="bg-white relative rounded-full h-full w-[12%]">
+      <div className="bg-white relative rounded-full h-full w-auto flex flex-row items-center gap-x-1">
         <img
-          className="h-[36px] w-[100px] object-cover rounded-t-full rounded-b-full opacity-80 -z-10"
+          className="h-[36px] w-[100px] object-cover rounded-t-full rounded-b-full opacity-80 z-0"
           src={logoImage}
           alt="logo-image.png"
         />
-        <h1 className="text-myColor contrast-150 absolute -top-[-5px] right-[10%] max-sm:hidden">
-          DevFolio
+        <h1 className="text-myColor text-xl ml-2 max-sm:hidden max-text-screen:text-[2vw] px-3 mr-5 text-nowrap">
+          Devfolio
         </h1>
       </div>
       {/* Icon to open the navbar (hamburger icon) */}
@@ -88,12 +88,12 @@ function NavBar() {
 
       {/* Navbar that slides in */}
       <div
-        className={`flex justify-between bg-black max-sm:absolute top-0 left-0 w-screen max-sm:p-3 ${
+        className={`flex justify-between  max-sm:absolute top-0 left-0 w-screen max-sm:p-3 ${
           isNavOpen ? " max-sm:translate-y-0" : " max-sm:-translate-y-full"
         }  transform transition-all sm:justify-end 
         `}
       >
-        <div className="flex  max-sm:flex-col gap-y-5 max-sm:mt-5 text-start mr-2 sm:border-2 sm:rounded-full">
+        <div className="flex max-sm:flex-col gap-y-5 max-sm:mt-5 text-start mr-2">
           {currentNavigation.map((item) => (
             <div key={item.name} className="flex items-center justify-start">
               <span className="hidden max-sm:inline-block">{item.image}</span>
@@ -101,8 +101,8 @@ function NavBar() {
                 onClick={(e) => handleScrollToSection(e)}
                 rel="noopener noreferrer"
                 href={item.href}
-                className={`text-white mx-2 transition-colors duration-300 hover:text-gray-500 sm:text-[1.8vw] lg:text-[1vw] max-sm:text-[3vw] max-md:text-[2vw] p-1 ${
-                  item.current ? "font-bold" : ""
+                className={`text-gray-500 text-center mx-2 transition-all duration-300 hover:text-white sm:text-[2.5vw] lg:text-[1.6vw] max-sm:text-[3vw] max-md:text-[2.5vw] p-1 ${
+                  item.current ? "font-bold text-white bg-gray-100 rounded-tl-full rounded-br-full px-4 py-1" : ""
                 }`}
               >
                 {item.name}

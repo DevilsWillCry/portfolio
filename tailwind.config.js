@@ -133,10 +133,11 @@ export default withMT( {
       }
     },
     screens: {
-      'max-sm': {'max': '540px'},  // Para pantallas de máximo 640px
-      'max-md': {'max': '768px'},  // Para pantallas de máximo 768px
-      'max-lg': {'max': '1024px'}, // Para pantallas de máximo 1024px
-      'max-xl': {'max': '1280px'}, // Puedes agregar más breakpoints si es necesario
+      'max-sm': {'max': '540px'},  
+      'max-md': {'max': '768px'}, 
+      'max-lg': {'max': '1024px'}, 
+      'max-xl': {'max': '1280px'}, 
+      'max-text-screen': {'max': '720px'}, 
     },
   },
   plugins: [],

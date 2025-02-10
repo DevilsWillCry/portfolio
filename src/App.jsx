@@ -1,26 +1,32 @@
 import React, { useEffect, useRef } from "react";
-import AboutSection from "./components/AboutSection";
-import MainSection from "./components/MainSection";
 import NavBar from "./components/NavBar";
+import MyBanner from "./components/MyBanner";
+import MainSection from "./components/MainSection";
+import AboutSection from "./components/AboutSection";
 import TecnologiesSection from "./components/TecnologiesSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ExpStudSection from "./components/ExpStudSection";
-import MyBanner from "./components/MyBanner";
 import ContactSection from "./components/ContactSection";
+import PcFrame from "./components/PcFrame";
 
 function App() {
   return (
-    <main className="w-screen h-auto items-center justify-center font-serif">
-      <NavBar />
-      <section id="home" className="section transition-all">
-        <MainSection />
-      </section>
-      <section
-        id="about"
-        className="section relative overflow-hidden bg-myColor flex justify-center items-center  h-screen w-screen transition-all duration-500 -z-10"
-      >
-        <AboutSection />
-      </section>
+    <>
+      <PcFrame />
+      <main className="flex flex-col relative top-0 left-[50%] translate-x-[-50%] w-[86.5vw] h-[87vh] items-center justify-start font-sans bg-[#070707] overflow-y-auto scroll-smooth">
+        <NavBar />
+
+        <section id="home" className="section flex flex-col items-center justify-center transition-all bg-[#070707] min-h-[87vh] w-full">
+          <MainSection />
+        </section>
+
+        {/* 
+        <section
+          id="about"
+          className="section relative overflow-hidden bg-[#070707] flex justify-center items-center  min-h-[87vh] w-full transition-all duration-500 z-10"
+        >
+          <AboutSection />
+        </section>
       <section
         id="technologies"
         className="section relative lg:h-[1000px] max-sm:h-[300px] sm:h-[440px]  w-screen flex flex-col items-center justify-center bg-[#070707]"
@@ -39,7 +45,9 @@ function App() {
       >
         <ContactSection/> 
       </section>
-    </main>
+      */}
+      </main>
+    </>
   );
 }
 

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import WaveText from "./WaveText";
 
 const Carousel = (props) => {
   const totalElements = props.arrayElements.length;

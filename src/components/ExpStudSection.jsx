@@ -9,7 +9,6 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-import { HomeIcon } from "@heroicons/react/24/outline";
 
 const ArrayExperienceElements = [
   {
