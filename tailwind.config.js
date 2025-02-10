@@ -11,6 +11,15 @@ export default withMT( {
         'myColor': '#b50556'
       },
       keyframes: {
+        'turn-on':{
+          '0%': { left: '100%'},
+          '100%': { left: '0'},
+
+        },
+        'tvflicker': {
+          '0%': { boxShadow: '0 0 100px 0 rgba(225,235,255,0.4)' },
+          '100%': { boxShadow: '0 0 60px 0 rgba(200,220,255,0.6)' },
+        },
         'scale-in-ver-top': {
           '0%': {
             transform: 'scaleY(0)',
@@ -124,6 +133,8 @@ export default withMT( {
         'shadowDropCenter': 'shadowDropCenter 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
         'rotate360': 'rotate360 20s infinite linear forwards',
         'infiniteScroll': 'infiniteScroll 10s infinite linear forwards',
+        'tv-flicker': 'tvflicker 0.5s infinite alternate',
+        'turn-on': 'turn-on 0.5s ease-out'
       },
       backgroundImage: {
         'background-main': "url('/src/assets/main-background.jpg')",

@@ -11,12 +11,15 @@ import PcFrame from "./components/PcFrame";
 
 function App() {
   return (
-    <>
+    <div className="bg-blue-gray-800 black w-screen h-screen">
       <PcFrame />
       <main className="flex flex-col relative top-0 left-[50%] translate-x-[-50%] w-[86.5vw] h-[87vh] items-center justify-start font-sans bg-[#070707] overflow-y-auto scroll-smooth">
         <NavBar />
 
-        <section id="home" className="section flex flex-col items-center justify-center transition-all bg-[#070707] min-h-[87vh] w-full">
+        <section
+          id="home"
+          className="section flex flex-col items-center justify-center transition-all bg-[#070707] min-h-[87vh] w-full"
+        >
           <MainSection />
         </section>
 
@@ -47,7 +50,7 @@ function App() {
       </section>
       */}
       </main>
-    </>
+    </div>
   );
 }
 

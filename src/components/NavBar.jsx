@@ -68,15 +68,15 @@ function NavBar() {
   };
 
   return (
-    <div className="flex flex-row  sticky top-8 left-[50%]  w-full h-auto max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between bg-white contrast-100">
+    <div className="flex flex-row  sticky top-8 left-[50%]  w-full h-auto max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between bg-[#070707] contrast-100">
       {/* Text NavBar in PC resolution*/}
-      <div className="bg-white relative rounded-full h-full w-auto flex flex-row items-center gap-x-1">
+      <div className="bg-gray-300 relative rounded-full h-full w-auto flex flex-row items-center gap-x-1">
         <img
           className="h-[36px] w-[100px] object-cover rounded-t-full rounded-b-full opacity-80 z-0"
           src={logoImage}
           alt="logo-image.png"
         />
-        <h1 className="text-myColor text-xl ml-2 max-sm:hidden max-text-screen:text-[2vw] px-3 mr-5 text-nowrap">
+        <h1 className="text-myColor text-xl ml-2 max-sm:hidden max-text-screen:text-[1vw] px-3 mr-5 text-nowrap">
           Devfolio
         </h1>
       </div>
@@ -101,8 +101,8 @@ function NavBar() {
                 onClick={(e) => handleScrollToSection(e)}
                 rel="noopener noreferrer"
                 href={item.href}
-                className={`text-gray-500 text-center mx-2 transition-all duration-300 hover:text-white sm:text-[2.5vw] lg:text-[1.6vw] max-sm:text-[3vw] max-md:text-[2.5vw] p-1 ${
-                  item.current ? "font-bold text-white bg-gray-100 rounded-tl-full rounded-br-full px-4 py-1" : ""
+                className={`text-gray-500 text-center mx-2 transition-all duration-300 hover:text-white sm:text-[1.3vw] lg:text-[1.2vw] max-sm:text-[3vw] max-md:text-[2.5vw] p-1 ${
+                  item.current ? "font-bold text-white bg-gray-500 rounded-tl-full rounded-br-full px-4 py-1" : ""
                 }`}
               >
                 {item.name}
