@@ -21,7 +21,7 @@ function App() {
         
         <section
           id="home"
-          className="section flex flex-col items-center justify-center transition-all min-h-[87vh] w-full"
+          className="section flex flex-col items-center justify-center transition-all min-h-[87vh] w-full pointer-events-none"
         >
           <MainSection />
         </section>

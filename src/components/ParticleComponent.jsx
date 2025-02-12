@@ -72,7 +72,8 @@ const ParticlesComponent = () => {
     // Carga de particles.js (si aún no está cargado)
     if (typeof window.particlesJS === 'undefined') {
       const particlesScript = document.createElement('script');
-      particlesScript.src = 'http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+      // Usar HTTPS para evitar Mixed Content
+      particlesScript.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
       particlesScript.async = true;
       particlesScript.onload = initParticles;
       document.body.appendChild(particlesScript);
@@ -110,7 +111,8 @@ const ParticlesComponent = () => {
     // Carga de stats.js (si aún no está cargado)
     if (typeof window.Stats === 'undefined') {
       const statsScript = document.createElement('script');
-      statsScript.src = 'http://threejs.org/examples/js/libs/stats.min.js';
+      // Usar HTTPS para evitar Mixed Content
+      statsScript.src = 'https://threejs.org/examples/js/libs/stats.min.js';
       statsScript.async = true;
       statsScript.onload = initStats;
       document.body.appendChild(statsScript);
