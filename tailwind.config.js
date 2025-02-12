@@ -118,6 +118,10 @@ export default withMT( {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(calc(0px - 100%))' },
         },
+        zoomIn:{
+          '0%': { transform:'scale(1)' },
+          '100%': { transform:'scaleY(1.11) scaleX(1.15) translateY(35px)' },
+        }
       },
       animation: {
         'scale-in-ver-top': 'scale-in-ver-top 1s ease-in-out both',
@@ -134,7 +138,8 @@ export default withMT( {
         'rotate360': 'rotate360 20s infinite linear forwards',
         'infiniteScroll': 'infiniteScroll 10s infinite linear forwards',
         'tv-flicker': 'tvflicker 0.5s infinite alternate',
-        'turn-on': 'turn-on 0.5s ease-out'
+        'turn-on': 'turn-on 0.5s ease-out',
+        'zoomIn': 'zoomIn 2s ease-in-out both',
       },
       backgroundImage: {
         'background-main': "url('/src/assets/main-background.jpg')",

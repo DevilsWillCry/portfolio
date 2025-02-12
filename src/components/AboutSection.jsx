@@ -16,8 +16,8 @@ function AboutSection() {
         />
       </div>
 
-      <div className="items-start w-full h-full px-10 max-sm:px-5 overflow-y-auto mt-3 max-sm:bg-black max-sm:bg-opacity-70 max-sm:rounded-xl">
-        <h1 className="text-[3vw] text-center font-extrabold transform-gpu mb-5 text-myColor max-sm:text-[8vw]">
+      <div className="items-start w-full h-full px-10 max-sm:px-5 overflow-y-auto mt-3  max-sm:bg-opacity-70 max-sm:rounded-xl">
+        <h1 className="text-[3vw] text-center font-extrabold transform-cpu mb-5 text-myColor max-sm:text-[8vw]">
           Sobre Mí
         </h1>
         <p className="text-[1.7vw] text-justify break-words tracking-wide hyphens-auto max-sm:text-[4vw] max-sm:text-white max-sm:tracking-tighter">

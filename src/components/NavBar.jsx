@@ -68,7 +68,7 @@ function NavBar() {
   };
 
   return (
-    <div className="flex flex-row  sticky top-8 left-[50%]  w-full h-auto max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between bg-[#070707] contrast-100">
+    <div className="flex flex-row  sticky top-8 left-[50%]  w-full h-auto max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between bg-[#070707] contrast-100 z-[100]">
       {/* Text NavBar in PC resolution*/}
       <div className="bg-gray-300 relative rounded-full h-full w-auto flex flex-row items-center gap-x-1">
         <img
