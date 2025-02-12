@@ -127,7 +127,7 @@ const ParticlesComponent = () => {
         style={{
           position: 'fixed',
           width: '100%',
-          height: `${(87+4)*2}vh`,
+          height: `${(87+4)*3}vh`,
           backgroundColor: '#070707',
           backgroundImage: 'url("")',
           backgroundRepeat: 'no-repeat',
