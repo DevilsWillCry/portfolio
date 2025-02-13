@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavBar from "./components/NavBar";
 import MyBanner from "./components/MyBanner";
 import MainSection from "./components/MainSection";
@@ -13,11 +13,28 @@ import ParticlesComponent from "./components/ParticleComponent";
 import Carousel3D from "./components/Carousel3D";
 
 function App() {
+  const scrollDivRef = useRef(null);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const divEl = scrollDivRef.current;
+    if (!divEl) return;
+
+    const handleScroll = () => {
+      setScrollTop(divEl.scrollTop);
+    };
+
+    divEl.addEventListener('scroll', handleScroll);
+    return () => {
+      divEl.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-blue-gray-800 black w-screen h-screen transition-all">
       <PcFrame />
-      <main className="flex flex-col relative top-0 left-[50%] translate-x-[-50%] w-[86.5vw] h-[87vh] items-center justify-start font-sans overflow-y-auto scroll-smooth [scrollbar-width:none]" webc:root="override">
-        <NavBar />
+      <main ref={scrollDivRef} className="flex flex-col relative top-0 left-[50%] translate-x-[-50%] w-[86.5vw] h-[87vh] items-center justify-start font-sans overflow-y-auto scroll-smooth [scrollbar-width:none]" webc:root="override">
+        <NavBar scrollData={scrollTop} />
         <ParticlesComponent />
         
         <section

@@ -1,62 +1,63 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logoImage from "../assets/logo-image.jpg";
 import {
   HomeIcon,
-  AcademicCapIcon,
   UserCircleIcon,
   TrophyIcon,
   CommandLineIcon,
   PhoneIcon,
 } from "@heroicons/react/24/solid";
 
-const navigation = [
+const navigationItems = [
   {
     name: "Inicio",
     href: "#home",
     current: true,
-    image: <HomeIcon className="text-myColor size-5" />,
-  },
-  {
-    name: "Sobre mí",
-    href: "#about",
-    image: <UserCircleIcon className="text-myColor size-5" />,
+    image: <HomeIcon className="text-myColor w-5 h-5" />,
   },
   {
     name: "Tecnologías",
     href: "#technologies",
-    image: <CommandLineIcon className="text-myColor size-5" />,
+    current: false,
+    image: <CommandLineIcon className="text-myColor w-5 h-5" />,
   },
   {
     name: "Proyectos",
     href: "#projects",
-    image: <TrophyIcon className="text-myColor size-5" />,
+    current: false,
+    image: <TrophyIcon className="text-myColor w-5 h-5" />,
+  },
+  {
+    name: "Sobre mí",
+    href: "#about",
+    current: false,
+    image: <UserCircleIcon className="text-myColor w-5 h-5" />,
   },
   {
     name: "Contacto",
     href: "#contact",
-    image: <PhoneIcon className="text-myColor size-5" />,
+    current: false,
+    image: <PhoneIcon className="text-myColor w-5 h-5" />,
   },
 ];
 
-function NavBar() {
+function NavBar({scrollData}) {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [currentNavigation, setNavigation] = useState(navigation);
+  const [currentNavigation, setNavigation] = useState(navigationItems);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleNavBar = () => {
-    console.log("Opening navigation");
     setIsNavOpen(true);
   };
 
   const handleCloseNavBar = () => {
-    console.log("Closing navigation");
     setIsNavOpen(false);
   };
 
-  // Función para manejar el desplazamiento suave y actualizar el estado
+  // Actualiza el estado de navegación al hacer click en un enlace.
   const handleScrollToSection = (e) => {
     const sectionName = e.target.textContent;
-    // Actualizar el estado de la navegación para resaltar la sección activa
     setNavigation(
       currentNavigation.map((navItem) =>
         navItem.name === sectionName
@@ -67,42 +68,81 @@ function NavBar() {
     setIsNavOpen(false);
   };
 
+  // IntersectionObserver para actualizar el item activo según la sección visible.
+  useEffect(() => {
+    const mainContainer = document.querySelector("main");
+    if (!mainContainer) return;
+    const sectionElements = currentNavigation.map((item) =>
+      document.querySelector(item.href)
+    );
+    const observerOptions = {
+      root: mainContainer,
+      threshold: 0.5,
+    };
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const activeId = entry.target.getAttribute("id");
+          setNavigation((prevNav) =>
+            prevNav.map((item) => ({
+              ...item,
+              current: item.href === `#${activeId}`,
+            }))
+          );
+        }
+      });
+    };
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sectionElements.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+    return () => {
+      observer.disconnect();
+    };
+  }, [currentNavigation]);
+
   return (
-    <div className="flex flex-row  sticky top-8 left-[50%] -translate-x-[8%] w-full   h-auto max-sm:items-end max-sm:p-3  sm:p-3 sm:items-center max-sm:justify-between bg-[#070707] contrast-100 z-[100]">
-      {/* Text NavBar in PC resolution*/}
-      <div className="bg-gray-300 relative rounded-full h-full w-auto flex flex-row items-center gap-x-1">
+    <div
+      className={`flex flex-row justify-between sticky top-8 left-1/2 -translate-x-[8%] w-full h-auto px-4 py-2 transition-all duration-300 backdrop-blur-md shadow-lg rounded-lg z-[100] max-sm:w-[90%] max-sm:-translate-x-[15%] ${
+        scrollData > 0
+          ? "bg-gradient-to-r from-gray-800/80 to-gray-900/80"
+          : "bg-gradient-to-r from-gray-800 to-gray-900"
+      }`}
+    >
+      {/* Logo */}
+      <div className="flex items-center gap-x-2">
         <img
-          className="h-[36px] w-[100px] object-cover rounded-t-full rounded-b-full opacity-80 z-0"
+          className="h-9 w-[100px] object-cover rounded-full opacity-90 sm:hidden lg:block"
           src={logoImage}
           alt="logo-image.png"
         />
-        <h1 className="text-myColor text-xl ml-2 max-sm:hidden max-text-screen:text-[1vw] px-3 mr-5 text-nowrap">
+        <h1 className="text-myColor text-xl hidden sm:block px-3 font-semibold sm:text-xs lg:text-2xl lg:ml-0 sm:ml-5">
           Devfolio
         </h1>
       </div>
-      {/* Icon to open the navbar (hamburger icon) */}
+
+      {/* Icono de hamburguesa para mobile */}
       <Bars3Icon
         onClick={handleNavBar}
-        className={`w-8 max-sm:flex hidden text-white cursor-pointer`}
+        className="w-8 flex sm:hidden text-white cursor-pointer"
       />
 
-      {/* Navbar that slides in */}
+      {/* Menú de navegación */}
       <div
-        className={`flex justify-between  max-sm:absolute top-0 left-0 w-screen max-sm:p-3 ${
-          isNavOpen ? " max-sm:translate-y-0" : " max-sm:-translate-y-full"
-        }  transform transition-all sm:justify-end 
-        `}
+        className={`flex flex-col sm:flex-row items-center transition-transform duration-300 ease-in-out absolute sm:static top-0 left-0 w-full sm:w-auto p-4 sm:p-0 ${
+          isNavOpen ? "translate-y-0" : "-translate-y-full"
+        } sm:translate-y-0 bg-gray-900 sm:bg-transparent`}
       >
-        <div className="flex max-sm:flex-col gap-y-5 max-sm:mt-5 text-start mr-2">
+        <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-x-5 text-center items-center ">
           {currentNavigation.map((item) => (
-            <div key={item.name} className="flex items-center justify-start">
-              <span className="hidden max-sm:inline-block">{item.image}</span>
+            <div key={item.name} className="flex items-center">
               <a
                 onClick={(e) => handleScrollToSection(e)}
-                rel="noopener noreferrer"
                 href={item.href}
-                className={`text-gray-500 text-center mx-2 transition-all duration-300 hover:text-white sm:text-[1.3vw] lg:text-[1.2vw] max-sm:text-[3vw] max-md:text-[2.5vw] p-1 ${
-                  item.current ? "font-bold text-white bg-gray-500 rounded-tl-full rounded-br-full px-4 py-1" : ""
+                className={`transition-colors duration-300 px-4 py-2 rounded-full text-sm sm:text-[1.5vw] lg:text-[1.2vw] ${
+                  item.current
+                    ? "font-bold text-white bg-gray-500"
+                    : "text-gray-300 hover:text-white hover:bg-gray-700"
                 }`}
               >
                 {item.name}
@@ -111,10 +151,10 @@ function NavBar() {
           ))}
         </div>
 
-        {/* Icon to close the navbar (X icon) */}
+        {/* Icono de cerrar en mobile */}
         <div
           onClick={handleCloseNavBar}
-          className="hidden max-sm:flex bg-red-500 h-max mt-3 hover:bg-red-800"
+          className="flex sm:hidden mt-4 bg-red-500 hover:bg-red-700 p-1 rounded-full"
         >
           <XMarkIcon className="w-6 h-6 text-white cursor-pointer" />
         </div>
