@@ -35,10 +35,7 @@ const Carousel = (props) => {
   
 
   return (
-    <div className="container relative text-center text-white lg:w-[180px] max-sm:w-[50px] sm:w-[140px] h-auto [perspective:800px] mt-[200px] mx-auto mb-0 z-10">
-      <h1 className="flex lg:text-[2.5vw] max-sm:text-[3.5vw] sm:text-[6.5vw] text-center mb-5 font-extrabold">
-        TECNOLOGÍAS
-      </h1>
+    <div className="container relative text-center text-white lg:w-[180px] max-sm:w-[50px] sm:w-[140px] h-auto [perspective:1000px] mt-[150px] mx-auto mb-0 z-10">
       <div
         className="carousel absolute w-[100%] h-[100%] [transform-style:preserve-3d] animate-rotate360 [transform-origin:center] lg:left-0 max-sm:left-1/2 sm:left-1/2 "
         style={{ backfaceVisibility: "hidden", willChange: "transform" }}
@@ -52,11 +49,11 @@ const Carousel = (props) => {
             }}
           >
             <img
-              className="block w-full lg:h-[120px] max-sm:h-[60px] sm:h-[60px] rounded-xl hover:animate-text-pop-up-top "
+              className="block w-full lg:h-[220px] max-sm:h-[60px] sm:h-[60px] rounded-xl"
               src={elemento.image}
               alt={elemento.name + ".jpg"}
             />
-            <span className="lg:text-[0.6vw] max-sm:text-[3vw] sm:text-[2.5vw] m-auto">
+            <span className="lg:text-[0.6vw] max-sm:text-[3vw] sm:text-[2vw] m-auto">
               {elemento.name}
             </span>
           </div>
