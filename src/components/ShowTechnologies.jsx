@@ -3,7 +3,7 @@ import React from "react";
 import htmlIcon from "../assets/infinite-scroll-images/html.png";
 import cssIcon from "../assets/infinite-scroll-images/css.png";
 import jsIcon from "../assets/infinite-scroll-images/js.png";
-import reactIcon from "../assets/infinite-scroll-images/react.png";
+import reactIcon from "../assets/infinite-scroll-images/React.png";
 
 
 import angularIcon from "../assets/infinite-scroll-images/angular.png";
