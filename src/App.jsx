@@ -11,6 +11,7 @@ import PcFrame from "./components/PcFrame";
 import ProgressClock from "./components/ProgressClock";
 import ParticlesComponent from "./components/ParticleComponent";
 import Carousel3D from "./components/Carousel3D";
+import ShowTechnologies from "./components/ShowTechnologies";
 
 function App() {
   const scrollDivRef = useRef(null);
@@ -45,25 +46,26 @@ function App() {
         </section>
         
         <section
+          id="technologies"
+          className="section relative lg:h-[1000px] max-sm:h-[86.5vw] sm:h-[440px]  w-screen flex flex-col items-center justify-center"
+        >
+          <ShowTechnologies />
+        </section>
+
+        <section
           id="projects"
-          className="section relative min-h-[87vh] w-[100vw] flex items-center justify-center"
+          className="section relative min-h-[87vh] w-full flex items-center justify-center"
         >
           <Carousel3D />
         </section>
 
-        {/* 
-        <section
-          id="technologies"
-          className="section relative lg:h-[1000px] max-sm:h-[86.5vw] sm:h-[440px]  w-screen flex flex-col items-center justify-center"
-        >
-          <TecnologiesSection />
-        </section>
         <section
           id="about"
           className="section relative  flex justify-center items-center min-h-[87vh] w-[70vw] transition-all duration-500 z-10 "
         >
           <AboutSection />
         </section>
+        {/* 
       <section
         id="contact"
         className="section relative w-screen max-sm:h-[100vh] lg:h-[100vh] sm:h-auto flex items-center justify-center bg-[#070707]"
