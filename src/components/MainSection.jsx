@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { ReactTyped } from "react-typed";
 import mainImage from "../assets/main-image.png";
 
-const textColor = "text-myColor";
-const altTextColor = "text-[#FFD700]";
+const textColor = "text-[#7f7f7f]";
+const altTextColor = "text-[#FFFF]";
 
 function MainSection() {
 
