@@ -123,7 +123,7 @@ function ShowTechnologies() {
         </div>
       </div>
 
-      <div className="scroll imgBox" style={{"--time":"25s"}}>
+      <div className="scroll imgBox" style={{"--time":"15s"}}>
         <div>
           <img src={htmlIcon} alt="" />
           <img src={cssIcon} alt="" />
@@ -136,6 +136,7 @@ function ShowTechnologies() {
           <img src={tailwindIcon} alt="" />
           <img src={premiereProIcon} alt="" />
         </div>
+
         <div>
           <img src={htmlIcon} alt="" />
           <img src={cssIcon} alt="" />
@@ -148,7 +149,6 @@ function ShowTechnologies() {
           <img src={tailwindIcon} alt="" />
           <img src={premiereProIcon} alt="" />
         </div>
-        
       </div>
     </>
   );

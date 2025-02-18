@@ -19,8 +19,8 @@ function MainSection() {
               "Frontend ReactJS",
               "Aplicaciones Escalables",
             ]}
-            typeSpeed={50}
-            backSpeed={30}
+            typeSpeed={30}
+            backSpeed={20}
             loop
           />
         </span>

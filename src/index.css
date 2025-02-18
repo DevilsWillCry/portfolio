@@ -656,18 +656,17 @@ html > .carousel,
 body > .carousel {
   padding-top: 125px;
 }
-
 .carousel {
+  width: 86.5vw;
+  margin: 0 auto;
   position: relative;
-  display: block;
-  width: 100vw;
   box-sizing: border-box;
 }
 
 .carousel__prev,
 .carousel__next {
   position: absolute;
-  bottom: -15%;
+  bottom: -10%;
   transition: transform 0.25s ease;
 }
 
@@ -691,12 +690,21 @@ body > .carousel {
   right: 40%;
 }
 
-.carousel__body {
-  width: 100%;
-  padding: 20px 0 50px 0;
-  overflow: hidden;
+@media screen and (max-width: 768px){
+  .carousel__prev {
+    left: 20%;
+  }
+  
+  .carousel__next {
+    right: 20%;
+  } 
 }
 
+.carousel__body {
+  width: 100%; 
+  overflow: hidden;
+  padding: 20px 0 50px 0;
+}
 .carousel__body .carousel__slider {
   position: relative;
   transition: transform 1s ease-in-out;
@@ -778,11 +786,11 @@ body > .carousel {
 
 /* -------------------------------- Diseño Carousel 3D para mostrar Proyectos ------------------------------------------------*/
 
-/* -------------------------------- Diseño infinite horizontal scroll to show technologies animation ------------------------------------------------*/
+/* -------------------------------- Diseño infinite horizontal scroll to show technologies animation -------------------------*/
 .scroll {
   position: relative;
   display: flex;
-  width: 100vw;
+  width: 87.5vw;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
 }
@@ -793,6 +801,7 @@ body > .carousel {
   animation-delay: calc(var(--time)*-1);
 
 }
+
 
 .scroll div:nth-child(2) {
   animation: scroll2 var(--time) linear infinite;
@@ -808,6 +817,7 @@ body > .carousel {
       transform: translateX(-100%);
   }
 }
+
 
 @keyframes scroll2 {
   0% {
@@ -839,11 +849,12 @@ body > .carousel {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .imgBox img {
-  max-width: 135px;
+  max-width: 165px;
   padding: 30px;
-  scale: 1.2;
+  scale: 0.8;
 }
 /* -------------------------------- Diseño infinite horizontal scroll to show technologies animation ------------------------------------------------*/

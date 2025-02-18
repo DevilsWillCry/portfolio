@@ -103,7 +103,7 @@ function NavBar({scrollData}) {
 
   return (
     <div
-      className={`flex flex-row justify-between sticky top-8 left-1/2 -translate-x-[8%] w-full h-auto px-4 py-2 transition-all duration-300 backdrop-blur-md shadow-lg rounded-lg z-[100] max-sm:w-[90%] max-sm:-translate-x-[15%] ${
+      className={`flex flex-row justify-between sticky top-8 left-1/2 -translate-x-[0.5%] w-full h-auto px-4 py-2 transition-all duration-300 backdrop-blur-md shadow-lg  z-[100] max-sm:w-[90%] max-sm:-translate-x-[5%] ${
         scrollData > 0
           ? "bg-gradient-to-r from-gray-800/80 to-gray-900/80"
           : "bg-gradient-to-r from-gray-800 to-gray-900"
@@ -116,7 +116,7 @@ function NavBar({scrollData}) {
           src={logoImage}
           alt="logo-image.png"
         />
-        <h1 className="text-myColor text-xl hidden sm:block px-3 font-semibold sm:text-xs lg:text-2xl lg:ml-0 sm:ml-5">
+        <h1 className="text-gray-300 text-xl hidden sm:block px-3 font-semibold sm:text-xs lg:text-2xl lg:ml-0 sm:ml-5">
           Devfolio
         </h1>
       </div>
