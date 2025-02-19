@@ -10,6 +10,7 @@ import  ImageGIT from "../assets/git-svgrepo-com.svg";
 import  ImageTAILWIND from "../assets/tailwind-svgrepo-com.svg";
 import  ImageSQL from"../assets/sql-database-generic-svgrepo-com.svg";
 import  ImageBOOTSTRAP from"../assets/bootstrap-svgrepo-com.svg";
+import { Description } from "@headlessui/react";
 
 
 export const arrayElements = [
@@ -73,4 +74,30 @@ export const arrayElements = [
     name: "Bootstrap",
     image: ImageBOOTSTRAP,
   }
+];
+
+
+export const arrayProyectsElements = [
+  {
+    id: 1,
+    lenguages: [
+      {
+        name: "HTML",
+        image: ImageHTML,
+      },
+      {
+        name: "CSS",
+        image: ImageCSS,
+      },
+      {
+        name: "JavaScript",
+        image: ImageJSS,
+      },
+    ],
+    projectName: "Clash Royale SC",
+    projectDescription:"",
+    projectImage: "https://i.ibb.co/3g49j7G/clash-royale-sc.png",
+    projectDeploy : "",
+    projectLink: "https://github.com/DevilsWillCry/ClashRoyaleSC",
+  },
 ];

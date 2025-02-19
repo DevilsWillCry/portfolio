@@ -17,7 +17,7 @@ import photoShopIcon from "../assets/infinite-scroll-images/photoshop.png";
 function ShowTechnologies() {
   return (
     <>
-      <div className="scroll" style={{"--time":"20s"}}>
+      <div className="scroll" style={{"--time":"30s"}}>
         <div>
           <span>HTML</span>
           <span>CSS</span>
@@ -44,7 +44,7 @@ function ShowTechnologies() {
         </div>
         
       </div>
-      <div className="scroll" style={{"--time":"30s"}}>
+      <div className="scroll" style={{"--time":"45s"}}>
         <div>
           <span>HTML</span>
           <span>CSS</span>
@@ -70,7 +70,7 @@ function ShowTechnologies() {
           <span>Node JS</span>
         </div>
       </div>
-      <div className="scroll" style={{"--time":"25s"}}>
+      <div className="scroll" style={{"--time":"35s"}}>
         <div>
           <span>HTML</span>
           <span>CSS</span>
@@ -123,7 +123,7 @@ function ShowTechnologies() {
         </div>
       </div>
 
-      <div className="scroll imgBox" style={{"--time":"15s"}}>
+      <div className="scroll imgBox" style={{"--time":"35s"}}>
         <div>
           <img src={htmlIcon} alt="" />
           <img src={cssIcon} alt="" />

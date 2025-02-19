@@ -145,10 +145,10 @@ const Carousel3D = () => {
                 <div className="item__3d-frame__box item__3d-frame__box--front flex flex-col items-center justify-start p-10">
                   <img
                     src={element.image}
-                    className="w-[60%] h-[80%] object-contain py-10"
+                    className="w-[70%] h-[80%] object-contain py-10"
                     alt=""
                   />
-                  <div className="w-full h-full flex flex-row items-center justify-around text-white ">
+                  <div className="w-full h-full flex flex-row items-center justify-around text-white">
                     <span className="flex flex-row items-center "><LinkIcon className="size-10 cursor-pointer transition-all duration-500 hover:scale-150" /></span>
                     <span className="flex flex-row items-center">< CodeBracketIcon className="transition-all duration-500 size-10 cursor-pointer hover:scale-150" /></span>
                   </div>

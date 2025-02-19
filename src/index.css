@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -666,7 +671,7 @@ body > .carousel {
 .carousel__prev,
 .carousel__next {
   position: absolute;
-  bottom: -10%;
+  bottom: -15%;
   transition: transform 0.25s ease;
 }
 
@@ -789,6 +794,7 @@ body > .carousel {
 /* -------------------------------- Diseño infinite horizontal scroll to show technologies animation -------------------------*/
 .scroll {
   position: relative;
+  font-family: "Atkinson Hyperlegible Mono", monospace;
   display: flex;
   width: 87.5vw;
   overflow: hidden;
@@ -815,6 +821,17 @@ body > .carousel {
 
   100% {
       transform: translateX(-100%);
+  }
+}
+
+
+@keyframes scroll3 {
+  0% {
+      transform: translateX(-100%);
+  }
+
+  100% {
+      transform: translateX(100%);
   }
 }
 
@@ -858,3 +875,197 @@ body > .carousel {
   scale: 0.8;
 }
 /* -------------------------------- Diseño infinite horizontal scroll to show technologies animation ------------------------------------------------*/
+
+
+/* -------------------------------- Diseño Code Typing IDE -------------------------------- */
+
+.illustration-editor {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  transform: translateY(30%);
+  margin-top: -2rem;
+  margin-right: -10rem;
+  display: grid;
+  grid-template-rows: 24px auto;
+  justify-items: center;
+}
+
+.illustration-editor .code {
+  position: absolute;
+  width: 300px;
+  height: 195px;
+  background: #1D1E22;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  z-index: 5;
+}
+
+.illustration-editor .code header {
+  display: grid;
+  grid-template-columns: 36px auto 36px;
+  align-items: center;
+}
+
+.illustration-editor .code header svg {
+  margin: 10px;
+}
+
+.illustration-editor .code header h1 {
+  font-family: Lato, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.57px;
+  color: #C5C8D4;
+  margin: 0;
+}
+
+.illustration-editor .code-html {
+  left: -100px;
+  top: 55px;
+}
+
+.illustration-editor .code-css {
+  left: 50px;
+  top: 200px;
+}
+
+.illustration-editor .code-js {
+  left: -175px;
+  top: 370px;
+}
+
+.illustration-editor .code .code-content {
+  margin: 0 10px 10px;
+  color: white;
+}
+
+.illustration-editor .code .code-content .c-r {
+  color: #A88038;
+}
+
+.illustration-editor .code .code-content .c-o {
+  color: #DE7300;
+}
+
+.illustration-editor .code .code-content .c-y {
+  color: #E1CA72;
+}
+
+.illustration-editor .code .code-content .c-g {
+  color: #74B087;
+}
+
+.illustration-editor .code .code-content .c-p {
+  color: #9F8198;
+}
+
+.illustration-editor .code .code-content .c-b {
+  color: #7A99AD;
+}
+
+.illustration-editor .code .code-content .c-c {
+  color: #666666;
+}
+
+/* Reglas generadas a partir de los bucles para .line-* dentro de .code-content code */
+.illustration-editor .code-css .code-content code .line-1 {
+  width: 0%;
+  margin: 0;
+  border-right: 0.15em solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-1 3s 0s steps(30, end) forwards, cursor 1s linear 0s 3;
+  animation-duration: 1s;
+  animation-timing-function: steps(10, end);
+}
+
+.illustration-editor .code-css .code-content code .line-2 {
+  width: 0%;
+  margin: 0;
+  border-right: 0.15em solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-2 3s 3s steps(30, end) forwards, cursor 1s linear 3s 3;
+  margin-left: 2rem;
+}
+
+.illustration-editor .code-css .code-content code .line-3 {
+  width: 0%;
+  margin: 0;
+  border-right: 0.15em solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-3 3s 6s steps(30, end) forwards, cursor 1s linear 6s 3;
+  animation-duration: 1s;
+  animation-timing-function: steps(10, end);
+  margin-left: 4rem;
+}
+
+.illustration-editor .code-css .code-content code .line-4 {
+  width: 0%;
+  margin: 0;
+  border-right: 0.15em solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing-4 3s 9s steps(30, end) forwards, cursor 1s linear 9s 3;
+  animation-duration: 1s;
+  animation-timing-function: steps(10, end);
+  margin-left: 4rem;
+}
+
+.illustration-editor .code-css .code-content code .line-5 {
+  width: 0%;
+  margin: 0;
+  border-right: 0.15em solid transparent;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  border-color: transparent;
+  animation: typing-5 3s 12s steps(30, end) forwards, cursor-persist 1s linear 12s infinite;
+  margin-left: 4rem;
+}
+
+.editor-block {
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 451px;
+  background: linear-gradient(109.61deg, #4C4F5A 4.26%, #202125 84.84%);
+  border-radius: 10px;
+}
+
+@keyframes typing-1 {
+  from { width: 0 }
+  to { width: 70px }
+}
+@keyframes typing-2 {
+  from { width: 0 }
+  to { width: 250px }
+}
+@keyframes typing-3 {
+  from { width: 0 }
+  to { width: 70px }
+}
+@keyframes typing-4 {
+  from { width: 0 }
+  to { width: 85px }
+}
+@keyframes typing-5 {
+  from { width: 0 }
+  to { width: 151px }
+}
+
+@keyframes cursor {
+  from, to, 30%, 80% { border-color: transparent }
+  25%, 75% { border-color: white }
+}
+
+@keyframes cursor-persist {
+  from, 45% { border-color: transparent }
+  50%, to { border-color: white }
+}

@@ -12,6 +12,7 @@ import ProgressClock from "./components/ProgressClock";
 import ParticlesComponent from "./components/ParticleComponent";
 import Carousel3D from "./components/Carousel3D";
 import ShowTechnologies from "./components/ShowTechnologies";
+import CodeTyping from "./components/CodeTyping";
 
 function App() {
   const scrollDivRef = useRef(null);
@@ -32,16 +33,17 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-blue-gray-800 black w-screen h-screen transition-all">
+    <div className="bg-blue-gray-800 black w-screen h-screen transition-all font-hyperlegible">
       <PcFrame />
-      <main ref={scrollDivRef} className="flex flex-col relative top-0 left-[50%] translate-x-[-50%] w-[86.5vw] h-[87vh] items-center justify-start font-sans overflow-y-auto scroll-smooth [scrollbar-width:none]" webc:root="override">
+      <main ref={scrollDivRef} className="flex flex-col relative top-0 left-[50%] translate-x-[-50%] w-[86.5vw] h-[87vh] items-center justify-start overflow-y-auto scroll-smooth [scrollbar-width:none]  " webc:root="override">
         <NavBar scrollData={scrollTop} />
         <ParticlesComponent />
         
         <section
           id="home"
-          className="section flex flex-col items-center justify-center transition-all min-h-[87vh] w-[86.5vw] pointer-events-none"
+          className="section flex flex-col items-center justify-center transition-all min-h-[87vh] w-[86.5vw] pointer-events-none  z-[1000]"
         >
+          <CodeTyping />
           <MainSection />
         </section>
         

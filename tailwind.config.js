@@ -7,6 +7,11 @@ export default withMT( {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+        hyperlegible: ['"Atkinson Hyperlegible Mono"', 'monospace'],
+      },
       colors: {
         'myColor': '#b50556'
       },

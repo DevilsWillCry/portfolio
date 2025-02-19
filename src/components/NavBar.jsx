@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logoImage from "../assets/logo-image.jpg";
+import logoImage from "../assets/code-brackets-icon.svg";
 import {
   HomeIcon,
   UserCircleIcon,
@@ -103,16 +103,16 @@ function NavBar({scrollData}) {
 
   return (
     <div
-      className={`flex flex-row justify-between sticky top-8 left-1/2 -translate-x-[0.5%] w-full h-auto px-4 py-2 transition-all duration-300 backdrop-blur-md shadow-lg  z-[100] max-sm:w-[90%] max-sm:-translate-x-[5%] ${
+      className={`flex flex-row justify-between sticky top-8 left-1/2 -translate-x-[0.5%] w-full h-auto px-5 py-2 transition-all duration-300 backdrop-blur-md shadow-lg  z-[100] max-sm:w-[100%] max-sm:-translate-x-[5%]  ${
         scrollData > 0
           ? "bg-gradient-to-r from-gray-800/80 to-gray-900/80"
           : "bg-gradient-to-r from-gray-800 to-gray-900"
       }`}
     >
       {/* Logo */}
-      <div className="flex items-center gap-x-2">
+      <div className="flex items-center gap-x-2 p-1 max-sm:ml-3">
         <img
-          className="h-9 w-[100px] object-cover rounded-full opacity-90 sm:hidden lg:block"
+          className="h-9 w-[50px] object-cover rounded-full opacity-90 sm:hidden lg:block"
           src={logoImage}
           alt="logo-image.png"
         />
@@ -124,7 +124,7 @@ function NavBar({scrollData}) {
       {/* Icono de hamburguesa para mobile */}
       <Bars3Icon
         onClick={handleNavBar}
-        className="w-8 flex sm:hidden text-white cursor-pointer"
+        className="w-8 flex sm:hidden text-white cursor-pointer mr-4"
       />
 
       {/* Menú de navegación */}
@@ -139,7 +139,7 @@ function NavBar({scrollData}) {
               <a
                 onClick={(e) => handleScrollToSection(e)}
                 href={item.href}
-                className={`transition-colors duration-300 px-4 py-2 rounded-full text-sm sm:text-[1.5vw] lg:text-[1.2vw] ${
+                className={`transition-colors duration-300 px-4 py-2 rounded-full text-sm sm:text-[1.5vw] lg:text-[1vw] ${
                   item.current
                     ? "font-bold text-white bg-gray-500"
                     : "text-gray-300 hover:text-white hover:bg-gray-700"
