@@ -794,86 +794,69 @@ body > .carousel {
 /* -------------------------------- Diseño infinite horizontal scroll to show technologies animation -------------------------*/
 .scroll {
   position: relative;
-  font-family: "Atkinson Hyperlegible Mono", monospace;
-  display: flex;
-  width: 87.5vw;
+  width: 86.5vw;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent)
+  /* Gradiente opcional para suavizar los bordes */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
 }
 
-.scroll div {
-  white-space: nowrap;
-  animation: scroll var(--time) linear infinite;
-  animation-delay: calc(var(--time)*-1);
-
+/* El contenedor que une ambas copias */
+.marquee {
+  display: flex;
+  /* Permite que el ancho se ajuste al contenido duplicado */
+  width: max-content;
+  /* La animación se realiza sobre toda la tira duplicada */
+  animation: marquee var(--time) linear infinite;
 }
 
-
-.scroll div:nth-child(2) {
-  animation: scroll2 var(--time) linear infinite;
-  animation-delay: calc(var(--time)/-2);
-}
-
-@keyframes scroll {
-  0% {
-      transform: translateX(100%);
+/* La animación mueve la tira de 0 a -50%
+   (al ser duplicada, -50% equivale a desplazar una copia completa) */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
   }
-
-  100% {
-      transform: translateX(-100%);
+  to {
+    transform: translateX(-50%);
   }
 }
 
 
-@keyframes scroll3 {
-  0% {
-      transform: translateX(-100%);
+@keyframes marquee2 {
+  from {
+    transform: translateX(0);
   }
-
-  100% {
-      transform: translateX(100%);
-  }
-}
-
-
-@keyframes scroll2 {
-  0% {
-      transform: translateX(0);
-  }
-
-  100% {
-      transform: translateX(-200%);
+  to {
+    transform: translateX(50%);
   }
 }
 
-.scroll div span {
+/* Estilos para cada item (span) */
+.marquee span {
   display: inline-flex;
-  margin: 10px;
-  letter-spacing: 0.3em;
+  align-items: center;
+  margin: 0 10px;
+  letter-spacing: 0.1em;
   background: #333;
   color: #fff;
-  padding: 5px 20px;
+  padding: 10px 20px;
   border-radius: 5px;
-  transition: 0.5s;
+  transition: background 0.5s;
 }
 
-.scroll div span:hover {
-  background: #3fd2f9;
+.marquee span:hover {
+  background: #677174;
   cursor: pointer;
 }
 
-.imgBox div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+.marquee span img {
+  object-fit: contain;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
 }
 
-.imgBox img {
-  max-width: 165px;
-  padding: 30px;
-  scale: 0.8;
-}
+
+
 /* -------------------------------- Diseño infinite horizontal scroll to show technologies animation ------------------------------------------------*/
 
 
@@ -883,7 +866,7 @@ body > .carousel {
   position: absolute;
   top: 0;
   left: 70%;
-  transform: translateY(30%);
+  transform: translateY(18%);
   margin-top: -2rem;
   margin-right: -10rem;
   display: grid;
@@ -1068,4 +1051,17 @@ body > .carousel {
 @keyframes cursor-persist {
   from, 45% { border-color: transparent }
   50%, to { border-color: white }
+}
+
+/* Appear Content on Scroll */ 
+
+.appear_content {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.appear_content.visible {
+  opacity: 1;
+  transform: scale(1);
 }
