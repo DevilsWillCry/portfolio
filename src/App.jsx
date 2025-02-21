@@ -103,7 +103,7 @@ function App() {
 
         <section
           id="technologies"
-          className="appear_content section relative  min-h-[55vh] w-[86.5vw]  flex flex-col items-center justify-center"
+          className="appear_content section relative  min-h-auto w-[100%]  flex flex-col items-center justify-center"
         >
           <ShowTechnologies />
         </section>

@@ -794,7 +794,7 @@ body > .carousel {
 /* -------------------------------- Diseño infinite horizontal scroll to show technologies animation -------------------------*/
 .scroll {
   position: relative;
-  width: 86.5vw;
+  width: 100%;
   overflow: hidden;
   /* Gradiente opcional para suavizar los bordes */
   -webkit-mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);

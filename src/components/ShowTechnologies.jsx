@@ -66,22 +66,6 @@ function ShowTechnologies() {
               {tech.name}
             </span>
           ))}
-
-          {/* Segunda copia para lograr continuidad */}
-          {technologies.map((tech, i) => (
-            <span key={`tech-dup-${i}`}>
-              <img src={tech.icon} alt={tech.name} />
-              {tech.name}
-            </span>
-          ))}
-
-          {/* Segunda copia para lograr continuidad */}
-          {technologies.map((tech, i) => (
-            <span key={`tech-dup-${i}`}>
-              <img src={tech.icon} alt={tech.name} />
-              {tech.name}
-            </span>
-          ))}
         </div>
       </div>
 
