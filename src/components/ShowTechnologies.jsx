@@ -42,7 +42,7 @@ const technologies = [
   { name: "Firebase", icon: firebaseIcon },
   { name: "Python", icon: pythonIcon },
   { name: "SQL", icon: sqlIcon },
-  { name: "Node JS", icon: nodeJsIcon },
+  { name: "NodeJS", icon: nodeJsIcon },
   { name: "MUI", icon: muiIcon },
   { name: "Tailwind", icon: tailwindIcon },
   { name: "Github", icon: githubIcon },
@@ -55,7 +55,7 @@ const technologies = [
 function ShowTechnologies() {
   return (
     <>
-      <div className="scroll mb-3" style={{ "--time": "20s" }}>
+      <div className="scroll mb-3" style={{ "--time": "35s" }}>
         <div className="marquee">
           {/* Primera copia */}
           {technologies.map((tech, i) => (
@@ -74,7 +74,7 @@ function ShowTechnologies() {
         </div>
       </div>
 
-      <div className="scroll mb-3" style={{ "--time": "30s" }}>
+      <div className="scroll mb-3" style={{ "--time": "40s" }}>
         <div className="marquee">
           {/* Primera copia */}
           {technologies.reverse().map((tech, i) => (
@@ -93,7 +93,7 @@ function ShowTechnologies() {
         </div>
       </div>
 
-      <div className="scroll mb-3" style={{ "--time": "25s" }}>
+      <div className="scroll mb-3" style={{ "--time": "35s" }}>
         <div className="marquee">
           {/* Primera copia */}
           {technologies.map((tech, i) => (
@@ -112,7 +112,7 @@ function ShowTechnologies() {
         </div>
       </div>
 
-      <div className="scroll" style={{ "--time": "35s" }}>
+      <div className="scroll" style={{ "--time": "45s" }}>
         <div className="marquee">
           {/* Primera copia */}
           {technologies.map((tech, i) => (

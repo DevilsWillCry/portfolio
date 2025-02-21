@@ -1065,3 +1065,28 @@ body > .carousel {
   opacity: 1;
   transform: scale(1);
 }
+
+
+/* Animación de 180 grados para arrow up y arrow down*/
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) scale(1.2) translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1) }
+  50% { transform: translateY(0%); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+  100% { transform: rotate(180deg) scale(1)  translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1) }
+}
+
+@keyframes rotate1 {
+  0% { transform: rotate(180deg) scale(1.2) translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1) }
+  50% { transform: translateY(0%); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+  100% { transform: rotate(360deg) scale(1)  translateY(-25%); animation-timing-function: cubic-bezier(0.8,0,1,1) }
+}
+
+.arrow-down {
+  color: red;
+  animation: rotate1 1s ease-out forwards;
+}
+
+.arrow-up {
+  color: blue;
+  animation: rotate 1s ease-out forwards;
+}

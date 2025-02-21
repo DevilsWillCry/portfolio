@@ -9,8 +9,6 @@ function PcFrame() {
   const timeoutRef = useRef(null);
   const handleClick = () => setIsOn(!isOn);
 
-  console.log("Estado:",isOn)
-
   useEffect(() => {
     // Si la pantalla está apagada, inicia el timeout de 5 segundos
     if (!isOn) {
@@ -19,7 +17,6 @@ function PcFrame() {
         clearTimeout(timeoutRef.current);
       }
       timeoutRef.current = setTimeout(() => {
-        console.log("Ya pasaron 5 seg, Pantalla OFF");
         setIsOffScreen(true);
       }, 5000);
     } else {
@@ -31,7 +28,6 @@ function PcFrame() {
       // Si la pantalla estaba en estado off, actualizamos a on
       if (isOffScreen) {
         setIsOffScreen(false);
-        console.log("Pantalla On");
       }
     }
 

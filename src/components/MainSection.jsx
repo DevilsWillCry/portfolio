@@ -5,7 +5,7 @@ import githubIcon from "../assets/infinite-scroll-images/github-icon.svg";
 import linkedinIcon from "../assets/linkedin-icon.svg";
 import cvIcon from "../assets/file-cv-icon.svg";
 import downloadIcon from "../assets/download-icon.svg";
-import { ArrowRightIcon } from '@heroicons/react/24/solid'
+import { ArrowRightIcon, ChevronDoubleDownIcon } from '@heroicons/react/24/solid'
 
 const textColor = "text-[#7f7f7f]";
 const altTextColor = "text-[#FFFF]";
@@ -75,12 +75,6 @@ function MainSection() {
               <img
                 src={cvIcon}
                 alt="Curriculum Link Icon"
-                className="w-8 h-8"
-              />
-              <ArrowRightIcon className="w-6 h-6 text-black" />
-              <img
-                src={downloadIcon}
-                alt="Download Link Icon"
                 className="w-8 h-8"
               />
             </a>
