@@ -18,6 +18,7 @@ import {
   ChevronDoubleUpIcon,
 } from "@heroicons/react/24/solid";
 
+
 function App() {
   const scrollDivRef = useRef(null);
   const [scrollTop, setScrollTop] = useState(0);
@@ -85,6 +86,7 @@ function App() {
         <ChevronDoubleDownIcon
           className={`arrow [display:inline_block_!important] animate-bounce w-10 h-10 text-white transition-all  z-[50] mr-5 mb-5 max-sm:mr-8`}
         />
+
       </div>
       <main
         ref={scrollDivRef}

@@ -50,7 +50,7 @@ const technologies = [
 function ShowTechnologies() {
   return (
     <>
-      <div className="scroll mb-3" style={{ "--time": "20s" }}>
+      <div className="scroll mb-3" style={{ "--time": "30s" }}>
         <div className="marquee">
           {/* Primera copia */}
           {technologies.map((tech, i) => (
@@ -88,7 +88,7 @@ function ShowTechnologies() {
         </div>
       </div>
 
-      <div className="scroll mb-3" style={{ "--time": "35s" }}>
+      <div className="scroll mb-3" style={{ "--time": "25s" }}>
         <div className="marquee">
           {/* Primera copia */}
           {technologies.map((tech, i) => (
@@ -109,7 +109,7 @@ function ShowTechnologies() {
 
       <div className="scroll" style={{ "--time": "45s" }}>
         <div className="marquee">
-          {/* Primera copia */}
+          {/* Primera copia */}s
           {technologies.map((tech, i) => (
             <span key={`tech-${i}`}>
               <img src={tech.icon} alt={tech.name} />
