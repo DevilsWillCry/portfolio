@@ -95,7 +95,7 @@ function App() {
         <ParticlesComponent />
         <section
           id="home"
-          className="appear_content section flex flex-col items-center justify-center transition-all min-h-[80vh] w-[86.5vw]"
+          className="section flex flex-col items-center justify-center transition-all min-h-[80vh] w-[86.5vw]"
         >
           <CodeTyping />
           <MainSection />
@@ -103,7 +103,7 @@ function App() {
 
         <section
           id="technologies"
-          className="appear_content section relative  min-h-auto w-[100%]  flex flex-col items-center justify-center"
+          className="appear_content section relative  min-h-[55vh] w-[86.5vw]  flex flex-col items-center justify-center"
         >
           <ShowTechnologies />
         </section>
