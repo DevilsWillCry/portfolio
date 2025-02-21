@@ -49,7 +49,7 @@ function MainSection() {
           />
         </span>
 
-        <div className="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 -bottom-36 w-52 h-32 items-center place-items-center">
+        <div className="grid grid-cols-2 absolute left-1/2 -translate-x-1/2 -bottom-36 w-52 h-32 items-center place-items-center max-sm:translate-y-1/3">
           <div className="flex text-gray-300 text-shadow font-bold bg-white  w-12 h-12 items-center justify-center rounded hover:scale-125 hover:bg-gray-500 hover:shadow-2xl cursor-pointer transition-all duration-300 max-sm:w-8 max-sm:h-8">
             <a
               href="https://github.com/DevilsWillCry"
@@ -80,7 +80,7 @@ function MainSection() {
             </a>
           </div>
 
-          <div className="col-span-full flex text-gray-300 text-shadow font-bold bg-white w-[75%] h-12 items-center justify-center rounded hover:scale-125 hover:bg-gray-500 hover:shadow-2xl cursor-pointer transition-all duration-300 max-sm:w-[65%] max-sm:h-8 ">
+          <div className="col-span-full flex text-gray-300 text-shadow font-bold bg-white w-[75%] h-12 items-center justify-center rounded hover:scale-125 hover:bg-gray-500 hover:shadow-2xl cursor-pointer transition-all duration-300 max-sm:w-[65%] max-sm:h-8">
             <a
               href="https://github.com/miguelangelgarcia"
               target="_blank"
