@@ -72,7 +72,7 @@ function ShowTechnologies() {
       <div className="scroll mb-3" style={{ "--time": "40s" }}>
         <div className="marquee">
           {/* Primera copia */}
-          {technologies.reverse().map((tech, i) => (
+          {technologies.map((tech, i) => (
             <span key={`tech-${i}`}>
               <img src={tech.icon} alt={tech.name} />
               {tech.name}
